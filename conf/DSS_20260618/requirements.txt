@@ -1,0 +1,20 @@
+# Web app
+flask_sqlalchemy
+flask
+gunicorn
+
+# ML / training
+torch
+transformers
+datasets
+scikit-learn
+
+# Visualization
+matplotlib
+Pillow
+
+# Weights & Biases
+wandb
+
+# Numerics
+numpy
