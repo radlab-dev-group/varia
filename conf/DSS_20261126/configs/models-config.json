@@ -1,0 +1,132 @@
+{
+  "semantic_routing": {
+    "auto": {
+      "providers": [
+        {
+          "id": "semantic-routing__auto",
+          "api_host": null,
+          "api_token": "",
+          "api_type": "builtin",
+          "input_size": 0,
+          "model_path": "",
+          "weight": 1.0,
+          "tool_calling": false
+        }
+      ]
+    }
+  },
+  "qwen_models": {
+    "qwen/Qwen3.8-Flash-Next": {
+      "providers": [
+        {
+          "id": "qwen3.8:flash-next-UD-IQ4_XL-70:7000",
+          "api_host": "http://192.168.100.70:7000",
+          "api_token": "",
+          "api_type": "llama.cpp",
+          "input_size": 256000,
+          "model_path": "qwen/Qwen3.8-Flash-Next",
+          "keep_alive": null,
+          "tool_calling": true,
+          "nworkers": 2
+        }
+      ],
+      "fallback_model": "qwen/Qwen3.8-27B"
+    },
+    "qwen/Qwen3.8-27B": {
+      "providers": [
+        {
+          "id": "qwen3.8:27b-UD-Q8_K_XL-66:7000",
+          "api_host": "http://192.168.100.66:7000",
+          "api_token": "",
+          "api_type": "llama.cpp",
+          "input_size": 256000,
+          "model_path": "qwen/Qwen3.8-27B",
+          "keep_alive": null,
+          "tool_calling": true,
+          "nworkers": 2
+        },
+        {
+          "id": "qwen3.8:27b-UD-Q8_K_XL-69:7000",
+          "api_host": "http://192.168.100.69:7000",
+          "api_token": "",
+          "api_type": "llama.cpp",
+          "input_size": 256000,
+          "model_path": "qwen/Qwen3.8-27B",
+          "keep_alive": null,
+          "tool_calling": true,
+          "nworkers": 2
+        }
+      ],
+      "providers_sleep": [
+        {
+          "id": "qwen3.8:27b-UD-Q8_K_XL-66:7000",
+          "api_host": "http://192.168.100.66:7000",
+          "api_token": "",
+          "api_type": "llama.cpp",
+          "input_size": 256000,
+          "model_path": "qwen/Qwen3.8-27B",
+          "keep_alive": null,
+          "tool_calling": true,
+          "nworkers": 2
+        },
+        {
+          "id": "qwen3.8:27b-UD-Q8_K_XL-69:7000",
+          "api_host": "http://192.168.100.69:7000",
+          "api_token": "",
+          "api_type": "llama.cpp",
+          "input_size": 256000,
+          "model_path": "qwen/Qwen3.8-27B",
+          "keep_alive": null,
+          "tool_calling": true,
+          "nworkers": 2
+        }
+      ]
+    },
+    "qwen3.8:27b": {
+      "providers": [
+        {
+          "id": "qwen3.8:27b-66:11434",
+          "api_host": "http://192.168.100.66:11434",
+          "api_token": "",
+          "api_type": "ollama",
+          "input_size": 256000,
+          "model_path": "qwen3.8",
+          "keep_alive": "45m",
+          "tool_calling": true,
+          "nworkers": 1
+        },
+        {
+          "id": "qwen3.8:27b-71:11434",
+          "api_host": "http://192.168.100.71:11434",
+          "api_token": "",
+          "api_type": "ollama",
+          "input_size": 256000,
+          "model_path": "qwen3.8",
+          "keep_alive": "45m",
+          "tool_calling": true,
+          "nworkers": 1
+        }
+      ],
+      "providers_sleep": [
+        {
+          "id": "qwen3.6:35b-70:11434",
+          "api_host": "http://192.168.100.70:11434",
+          "api_token": "",
+          "api_type": "ollama",
+          "input_size": 256000,
+          "model_path": "",
+          "keep_alive": "45m",
+          "tool_calling": true,
+          "nworkers": 1
+        }
+      ]
+    }
+  },
+  "active_models": {
+    "qwen_models": [
+      "qwen3.8:27b",
+      "qwen/Qwen3.8-27B",
+      "qwen/Qwen3.8-Flash-Next"
+    ]
+  }
+}
